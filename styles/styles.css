@@ -2,6 +2,7 @@ body, html {
 	margin: 0;
 	padding: 0;
 	overflow: auto;
+	height: 100%;
 }
 
 body {
@@ -13,25 +14,29 @@ body {
 	padding: 0;
 	align-items: center;
 	justify-content: center;
-	min-height: 100vh;
-	overflow: hidden;
 }
 
 .textdiv {
-	background-color: rgba(0, 0, 0, 0.85);
+	background-color: rgba(0, 0, 0, 0.9);
 	padding: 40px;
-	border-radius: 10px;
+	border-radius: 3px;
 	text-align: left;
 	font-family: "Roboto Slab", sans-serif;
 	font-size: 18px;
 	color: #ffffff;
-	max-width: min(80%, 600px);
+	max-width: min(80%, 800px);
 	margin: 0 auto;
 }
 
+#header {
+	margin-bottom: 50px;
+	text-align: center;
+	margin-top: 0px;
+}
+
 table {
-	background-color: rgba(0, 0, 0, 0.85);
-	padding: 20px;
+	background-color: rgba(0, 0, 0, 0.9);
+	padding: 0px;
 	text-align: center;
 	font-family: "Roboto Slab", sans-serif;
 	font-size: 20px;
@@ -46,9 +51,9 @@ table {
 }
 
 .container {
-	max-height: 80vh;
-	overflow-y: hidden;
+	overflow-y: auto;
 	padding: 20px;
+	margin-top: 80px;
 }
 
 td {
