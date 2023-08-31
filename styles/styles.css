@@ -1,0 +1,69 @@
+body, html {
+	margin: 0;
+	padding: 0;
+	overflow: auto;
+	height: 100%;
+}
+
+body {
+	background-image: url("../resources/background.jpg");
+	background-color: #4CAFFF;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0;
+	padding: 0;
+	align-items: center;
+	justify-content: center;
+}
+
+.textdiv {
+	background-color: rgba(0, 0, 0, 0.9);
+	padding: 40px;
+	border-radius: 3px;
+	text-align: left;
+	font-family: "Roboto Slab", sans-serif;
+	font-size: 18px;
+	color: #ffffff;
+	max-width: min(80%, 800px);
+	margin: 0 auto;
+}
+
+#header {
+	margin-bottom: 50px;
+	text-align: center;
+	margin-top: 0px;
+}
+
+table {
+	background-color: rgba(0, 0, 0, 0.9);
+	padding: 0px;
+	text-align: center;
+	font-family: "Roboto Slab", sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	color: #ffffff;
+	width: 100%;
+	border-collapse: collapse;
+	border-spacing: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.container {
+	overflow-y: auto;
+	padding: 20px;
+	margin-top: 80px;
+}
+
+td {
+	padding: 20px;
+	border: 1px solid black;
+	text-align: center;
+	transition: background-color 300ms;
+}
+
+td:hover {
+  background-color: #a6c1ed;
+  cursor: pointer;
+}
