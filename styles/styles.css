@@ -76,25 +76,25 @@ td:hover {
 
 .expandable_btn:hover {
 	cursor: pointer;
-	color: #80aaff;
+	color: #27679c;
 	text-shadow: 1px 1px #1C7FCF;
 }
 
 .expandable_btn {
-	color: #ffffff;
+	color: #a1cbff;
 	transition: color 300ms;
 	font-size: 18px;
-	text-shadow: 1px 1px #3C9FEF;
+	text-shadow: 1px 1px #0d5188;
 }
 
 .expandable_plus:hover {
 	cursor: pointer;
-	color: #80aaff;
-	text-shadow: 1px 1px #1C7FCF;
+	color: #27679c;
+	text-shadow: 1px 1px #0d5188;
 }
 
 .expandable_plus {
-	color: #ffffff;
+	color: #a1cbff;
 	transition: color 300ms;
 	font-size: 18px;
 	text-shadow: 1px 1px #3C9FEF;
