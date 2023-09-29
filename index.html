@@ -112,8 +112,10 @@
 						• Since most cameras already perform the conversion of the raw image to a compressed format (for example, JPEG), it would require a lot of computational power to decompress and 
 						process each image to figure out its importance, in terms of whether it contains information about the wildfire or not, and based on that, decide if the drone should transmit the data.<br/><br/>
 						• Therefore, I worked on an algorithm in C++ to process the JPEG image data in the compressed domain and use binary classification to decide whether the picture contains wildfire information or not.<br/><br/>
-						• I used a simple case to create a Support Vector Machine to classify between images that have more red content vs. blue content. That way, there was no need to decompress the images, and just use their 
-						DC (average) chromaticity values from the Discreate Cosine Transform data.<br/><br/>
+						• I used a simple case to create a Support Vector Machine (SVM) to classify between images that have more red content vs. blue content. That way, there was no need to decompress the images, and just use their 
+						DC (average) chromaticity values from the Discreate Cosine Transform data.<br/>
+						To create the decision boundary, I first extracted the average red and blue chromaticities of images using MATLAB, and then trained the SVM 
+						based on these extracted values using Python, and plotted them for visualization.<br/><br/>
 						You can read more about our project in our <a href="resources/smac_fire_poster.pdf" target="_blank" rel="noopener noreferrer">Final Poster.</a><br/><br/>
 					</p>
 				</div>
