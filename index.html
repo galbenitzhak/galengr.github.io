@@ -3,7 +3,6 @@
 	<head>
 		<title>Gal Ben-Itzhak's Website</title>
 		<meta charset="UTF-8">
-		<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
 		<link rel="stylesheet" type="text/css" href="styles/styles.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link href="resources/favicon.ico" type="image/x-icon" rel="shortcut icon" />
@@ -145,8 +144,8 @@
 						After many hours of refining the layouts of each component, tuning the bandwidth of the lowpass filter, and passing Design Rule Checks 
 						to correctly map between schematics and layouts, I got my DPLL to successfully lock frequencies in the range 12.5 MHz - 250 MHz.<br/>
 						The figures below display the VCO control voltage, reference clock input, DPLL output, and VCO output at 250 MHz input.<br/>
-						<img src="resources/vco_ctrl.jpg" class="supporting" alt="VCO Schematic" style="float: left; margin: 40px 5%">
-						<img src="resources/vco_clk.jpg" class="supporting" alt="VCO Layout" style="float: right; margin: 40px 5%"><br/><br/>
+						<img src="resources/vco_ctrl.jpg" class="supporting" alt="Control Voltage of VCO Over Time While DPLL is Locking" style="float: left; margin: 40px 5%">
+						<img src="resources/vco_clk.jpg" class="supporting" alt="Voltage Waveforms - Referece Clock, DPLL Clock, and VCO Output" style="float: right; margin: 40px 5%"><br/><br/>
 					</p>
 				</div>
 				<p class="expandable_btn" id="noise_btn"><span id="noise_plus">+</span>&nbsp;&nbsp;Adaptive Noise Cancellation</p>
@@ -172,8 +171,8 @@
 					matches the original voice signal the most.
 					The plot on the left shows the three signals (Original in yellow, Least Squares in red, and LMS in blue, step size 0.00005), and the plot 
 					on the right shows the LMS signal using different step sizes.<br/>
-					<img src="resources/voice1.jpg" class="supporting" alt="Original, LMS, and Least Squares signals" style="float: left; margin: 40px 5%">
-					<img src="resources/voice2.jpg" class="supporting" alt="LMS-Filtered Signal using different step sizes" style="float: right; margin: 40px 5%"><br/><br/>
+					<img src="resources/voice1.jpg" class="supporting" alt="Original, LMS, and Least Squares Signals" style="float: left; margin: 40px 5%">
+					<img src="resources/voice2.jpg" class="supporting" alt="LMS-Filtered Signal Using Different Step Sizes" style="float: right; margin: 40px 5%"><br/><br/>
 					The Least Squares algorithm converged almost right away, but took much longer computation time. The LMS algorithm converged very slowly, depending on the step size. 
 					However, increasing the step size beyond a certain threshold caused the filter's response to diverge and the noise to amplify by magnitudes. This taught me 
 					about the tradeoff between using more computation time and resources to optimize the filter using less samples, versus using less computation resources but 
