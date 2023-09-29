@@ -113,8 +113,8 @@
 						process each image to figure out its importance, in terms of whether it contains information about the wildfire or not, and based on that, decide if the drone should transmit the data.<br/><br/>
 						• Therefore, I worked on an algorithm in C++ to process the JPEG image data in the compressed domain and use binary classification to decide whether the picture contains wildfire information or not.<br/><br/>
 						• I used a simple case to create a Support Vector Machine (SVM) to classify between images that have more red content vs. blue content. That way, there was no need to decompress the images, and just use their 
-						DC (average) chromaticity values from the Discreate Cosine Transform data.<br/>
-						To create the decision boundary, I first extracted the average red and blue chromaticities of images using MATLAB, and then trained the SVM 
+						DC (average) chromaticity values from the Discrete Cosine Transform data.<br/>
+						To create the decision boundary, I first extracted the average red and blue chromaticities of the images using MATLAB, and then trained the SVM 
 						based on these extracted values using Python, and plotted them for visualization.<br/><br/>
 						You can read more about our project in our <a href="resources/smac_fire_poster.pdf" target="_blank" rel="noopener noreferrer">Final Poster.</a><br/><br/>
 					</p>
@@ -129,15 +129,14 @@
 						The Digital Phase-Locked Loop (DPLL) was the final project in a graduate course that I took about VLSI. 
 						I was required to design the DPLL using Cadence to create both the overall schematic and the layout of the CMOS-based components.<br/><br/>
 						The purpose of the circuit is to align the frequency and phase of a local clock with those of an input reference clock. 
-						The system has a local Voltage-Controlled Oscillator operating at around 1.3 GHz using a closed loop of an odd number of CMOS inverters 
-						with their current flow controlled by the voltage biasing of NMOS devices connected to the source of the bottom NMOS of each inverter. 
+						The system has a local Voltage-Controlled Oscillator (VCO) operating at around 1.3 GHz using a closed loop of an odd number of CMOS inverters 
+						with their current flow controlled by the voltage biasing of an NMOS device connected to the source of the bottom NMOS of each inverter. 
 						Then, that VCO signal gets passed through an array of frequency divider circuits to provide limitation to the frequency of the VCO so it can 
-						better align with the reference clock frequency. Both the reference clock and the output of the frequency-divider clock are the inputs of 
-						a Phase-Frequeny Detector that responds to the differences in the input signal levels. It outputs those differences to a Charge Pump, followed 
-						by a lowpass filter to control the biasing of the VCO, and thus align the frequency and phase of the VCO with the input ones.<br/><br/>
-						The NMOS and PMOS devices were required to be scaled accurately with keeping their W/L ratios optimal for the function required. For example, 
-						the (W/L<sub>p</sub> / W/L<sub>n</sub>) ratio for the VCO was close to 3.4 to have more symmetry in the voltage transfer characteristics of the CMOS 
-						inverters with almost equal noise margins, making the VCO signal more square-wave-shaped.<br/>
+						better align with the reference square-wave frequency. Both the reference clock and the output of the frequency-divider are the inputs to 
+						a Phase-Frequency Detector that responds to the differences in the input signal levels. It outputs those differences to a Charge Pump, followed 
+						by a lowpass filter to control the biasing of the VCO without abrupt changes, and finally aligns the frequency and phase of the VCO with the input ones.<br/><br/>
+						The NMOS and PMOS devices were required to be scaled accurately by keeping their W/L ratios optimal for the function of each circuit element they are in. For example, 
+						the (W/L<sub>p</sub> / W/L<sub>n</sub>) ratio for the VCO inverters was close to 2.4 to have more symmetry in the rise and fall times of the CMOS inverters.<br/>
 						The example schematic and layout below are those of the VCO.<br/>
 						<img src="resources/vco_schematic.jpg" class="supporting" alt="VCO Schematic" style="float: left; margin: 40px 5%">
 						<img src="resources/vco_layout.jpg" class="supporting" alt="VCO Layout" style="float: right; margin: 40px 5%"><br/><br/>
@@ -162,13 +161,13 @@
 					using the resulting correlation matrices. This method should converge faster, but it requires complicated matrix inversion 
 					calculations that take time for the device to process.<br/><br/>
 					<b>Least Mean Squares Adaptive Filtering: </b>Adjust the filter according to the error that it produces multiplied by a small number (step size) to 
-					more gradually converge into the optimum. This is similar to the gradient-based approach, but instead of updating the filter using the gradient of 
+					gradually converge towards the optimum. This is similar to the gradient-based approach, but instead of updating the filter using the gradient of 
 					the produced squared error, it just uses the error signal, thereby requiring less calculations, but resulting in much slower convergence.<br/><br/>
-					By experimenting with the LMS filter parameters, I attempted to optimize its result by attempting to reach faster convergence.<br/><br/>
+					By experimenting with the LMS filter parameters, I attempted to reach faster convergence and have less noise in the produced error sound.<br/><br/>
 					As an example, I had a voice file with a strong background jet engine noise (that has been passed through a certain filter), and another file with similar 
 					jet engine noise. The task was to try and match the adaptive filter with the filter that the noise was passed through.<br/>
-					After creating the two filters, I compared their performances both by listening to them and plotting the resulting error signals to see which one 
-					matches the original voice signal the most.
+					After designing the two adaptive filters, I compared their performances by listening to them and plotting the resulting error signals to see which one 
+					matches the original voice signal the most.<br/><br/>
 					The plot on the left shows the three signals (Original in yellow, Least Squares in red, and LMS in blue, step size 0.00005), and the plot 
 					on the right shows the LMS signal using different step sizes.<br/>
 					<img src="resources/voice1.jpg" class="supporting" alt="Original, LMS, and Least Squares Signals" style="float: left; margin: 40px 5%">
