@@ -103,13 +103,13 @@ td:hover {
 .expandable_div.hidden {
 	max-height: 0px;
 	overflow: hidden;
-	transition: max-height 800ms;
+	transition: max-height 1s;
 }
 
 .expandable_div.shown {
-	max-height: 2500px;
+	max-height: 3000px;
 	overflow: hidden;
-	transition: max-height 800ms;
+	transition: max-height 1s;
 }
 
 a {
