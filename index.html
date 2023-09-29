@@ -3,9 +3,10 @@
 	<head>
 		<title>Gal Ben-Itzhak's Website</title>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="styles/styles.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link href="resources/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
 		<script src="scripts/background.js" type="text/javascript"></script>
 	</head>
@@ -16,6 +17,7 @@
 					<td class="nav_td" id="_about">About Me</td>
 					<td class="nav_td" id="_internships">Industry</td>
 					<td class="nav_td" id="_research">Research</td>
+					<td class="nav_td" id="_projects">Projects</td>
 					<td class="nav_td" id="_contact">Contact</td>
 				</tr>
 			</table>
@@ -27,48 +29,167 @@
 			</div>
 			<div class="textdiv" id="about">
 				<h2 style="margin-top: -10px; margin-bottom: -10px">Welcome to my website!</h2><br />
-				<p>More info soon...</p>
-			</div>
-			<div class="textdiv" id="skills">
-				<h1 class="textheader">Technical Skills</h1>
+				<p>My name is Gal Ben-Itzhak ~<br/><br/>
+				I am a first-year Electrical Engineering Ph.D. student
+				at the University of California, Irvine, where I have also
+				completed my B.S. in Electrical Engineering <span style="font-style: italic">
+				Summa Cum Laude</span> with a double specialization in Digital
+				Signal Processing & Communications.<br/><br/>
+				I am currently interning at NASA Jet Propulsion Laboratory as an
+				Electronics Hardware Engineering Intern for the Suborbital Radar
+				Science and Engineering Group.<br/><br/>
+				My goal is to design efficient technology that will help our 
+				environment and reduce our carbon footprint, and participate in 
+				projects that help us learn about and conserve our planet.<br/>
+				</p>
 			</div>
 			<div class="textdiv" id="internships">
 				<h1 class="textheader">Internship Experiences</h1>
-				<p><span class="expandable_btn" id="jpl_btn">+</span>&nbsp;&nbsp;Electronics Hardware Engineering Intern - <span style="font-style: italic;">NASA Jet Propulsion Laboratory</span></p>
+				<p class="expandable_btn" id="jpl_btn"><span id="jpl_plus">+</span>&nbsp;&nbsp;Electronics Hardware Engineering Intern - <span style="font-style: italic;">NASA Jet Propulsion Laboratory</span></p>
 				<div class="expandable_div hidden" id="jpl_div">
-					<p>hello!<br/><br/>wassup!<br/>hai</p>
+					<p>
+						<img src="resources/gal_jpl.jpg" class="supporting" alt="NASA Jet Propulsion Laboratory Mission Control Room">
+						• Designed the power distribution board of the DGPS system for the <a href="https://uavsar.jpl.nasa.gov">UAVSAR</a> using Altium. 
+						Drew the schematics, designed component footprints and pinouts, and designed the PCB layout and stackup. 
+						Tested and debugged the PCB to confirm it performs its functions accurately.<br/><br/>
+						• Designed cable drawings to interface between the various DGPS components and the power board, making sure they all fit in a fixed enclosure.<br/><br/>
+						• Soldered different cables to increase cable length and match between different connectors.<br/><br/>
+						• Maintained corner reflectors.<br/><br/>
+						• Designed an RF distribution system, oscillator clock distribution, and a PPS fanout buffer board.<br/><br/>
+						• Processed GPS and INU data using MATLAB procedures.<br/><br/>
+					</p>
 				</div>
 				<br/>
-				<p><span class="expandable_btn" id="menlo_btn">+</span>&nbsp;&nbsp;RF Applications Engineering Intern - <span style="font-style: italic;">Menlo Micro</span></p>
+				<p class="expandable_btn" id="menlo_btn"><span id="menlo_plus">+</span>&nbsp;&nbsp;RF Applications Engineering Intern - <span style="font-style: italic;">Menlo Micro</span></p>
 				<div class="expandable_div hidden" id="menlo_div">
-					
+					<p>• Performed R<sub>on</sub>, rise/fall time, S-parameter characterization, C<sub>off</sub>, and power tests for RF switches.<br/><br/>
+					• Tested the turn-off input voltage bias of RF switches over cycles.<br/><br/>
+					• Developed a software to automate IP3 testing using a PIM testing device.
+					Programmed in C to interface between the testing instrument and the RF switch and have 
+					the computer control both via USB connections. Then, I created a GUI to control the 
+					software using C++ to make it more user-friendly to the other testers, including saving states and data. 
+					Generalized this software for multiple RF switches.<br/><br/>
+					• Using the above software, I tested RF switches over cycles  
+					to see the differences in IP3 over their entire lifetimes.<br/><br/>
+					• Characterized multiple revisions of the MM5620 switches to plot their S-parameters, and compared them, 
+					and provided my analysis to the rest of the engineers.<br/><br/>
+					• For many of my tests, I generated plots and created presentations that 
+					provide my insight on the data and summarize their statistics, to present the results clearly to the rest of the 
+					team and customers.<br/><br/>
+					• Calibrated and maintained equipment, such as PIM testers, VNAs, power supplies, LCR meters, and RF hot-switching test devices.<br/><br/>
+					</p>
 				</div>
 				<br/>
-				<p><span class="expandable_btn" id="aloe_btn">+</span>&nbsp;&nbsp;Electrical Engineering Intern - <span style="font-style: italic;">Aloe Semiconductor</span></p>
+				<p class="expandable_btn" id="aloe_btn"><span id="aloe_plus">+</span>&nbsp;&nbsp;Electrical Engineering Intern - <span style="font-style: italic;">Aloe Semiconductor</span></p>
 				<div class="expandable_div hidden" id="aloe_div">
-					
+					• Used MATLAB and Simulink to analyze eye diagrams of high speed signals, and configure equalizers 
+					to maximize their SNR and minimize their BER.<br/><br/>
+					• Designed and simulated PCB traces and vias using ADS to maximize signal integrity.<br/><br/>
+					• Created a transimpedance amplifier using LTSpice.<br/><br/>
+					• Designed IBIS-AMI models for our circuits using SystemVue.<br/><br/>
+					• Helped with the implementation of sampling, filtering, and power measurements of signals using an FPGA board, 
+					and compared these results with those of a block diagram that I designed using Simulink.<br/><br/>
 				</div>
 			</div>
 			<div class="textdiv" id="research">
 				<h1 class="textheader">Research</h1>
-				<p><span class="expandable_btn" id="ris_btn">+</span>&nbsp;&nbsp;Wave-Controlled Metasurface-Based Reconfigurable Intelligent Surfaces</p>
+				<p class="expandable_btn" id="ris_btn"><span id="ris_plus">+</span>&nbsp;&nbsp;Wave-Controlled Metasurface-Based Reconfigurable Intelligent Surfaces</p>
 				<div class="expandable_div hidden" id="ris_div">
-					
+					• Working on optimization for the beamforming of the RIS elements, for my M.S. thesis and Ph.D. research.<br/><br/>
+					• Future publications will be posted here!<br/><br/>
 				</div>
 				<br/>
-				<p><span class="expandable_btn" id="smacfire_btn">+</span>&nbsp;&nbsp;SMAC-FIRE</p>
+				<p class="expandable_btn" id="smacfire_btn"><span id="smacfire_plus">+</span>&nbsp;&nbsp;SMAC-FIRE</p>
 				<div class="expandable_div hidden" id="smacfire_div">
-					
+					<p>
+						• Led a group of 5 engineering students with this topic as our senior project.<br/><br/>
+						• <a href="https://cpcc.uci.edu/research.php">SMAC-FIRE</a> (Closed-Loop Sensing, Modeling, and Communications for WildFIRE) is an NSF-funded research project 
+						focused on the construction of a network of airborne drones and wireless sensors that can map wildfires and predict 
+						their spread, and thus support on-ground firefighters.<br/><br/>
+						• In our senior project, we used drones as relay stations to forward messages and media between each other, and thus increase the area of coverage of 
+						the entire system, instead of having all the drones communicate only with a ground station. <br/>
+						For the proof of concept, we connected a Raspberry PI to each drone and attached Wi-Fi dongles to them to establish communication between the different drones. 
+						We verified that we can send commands from one Raspberry PI to another and control the drone using the MAVLink Protocol.<br/><br/>
+						• While working on this project, I was also interested in optimization of the communication system and using the least amount of power necessary to process and transmit the drone 
+						images to determine where wildfires are present.<br/><br/>
+						• Since most cameras already perform the conversion of the raw image to a compressed format (for example, JPEG), it would require a lot of computational power to decompress and 
+						process each image to figure out its importance, in terms of whether it contains information about the wildfire or not, and based on that, decide if the drone should transmit the data.<br/><br/>
+						• Therefore, I worked on an algorithm in C++ to process the JPEG image data in the compressed domain and use binary classification to decide whether the picture contains wildfire information or not.<br/><br/>
+						• I used a simple case to create a Support Vector Machine to classify between images that have more red content vs. blue content. That way, there was no need to decompress the images, and just use their 
+						DC (average) chromaticity values from the Discreate Cosine Transform data.<br/><br/>
+						You can read more about our project in our <a href="resources/smac_fire_poster.pdf">Final Poster.</a><br/><br/>
+					</p>
 				</div>
-				<br/>
-				<p><span class="expandable_btn" id="hyperspectral_btn">+</span>&nbsp;&nbsp;Hyperspectral Image Processing</p>
-				<div class="expandable_div hidden" id="hyperspectral_div">
-					
+			</div>
+			<div class="textdiv" id="projects">
+				<h1 class="textheader">Projects</h1>
+				<p class="expandable_btn" id="dpll_btn"><span id="dpll_plus">+</span>&nbsp;&nbsp;Digital Phase-Locked Loop</p>
+				<div class="expandable_div hidden" id="dpll_div">
+					<p>
+						<img src="resources/dpll.jpg" class="supporting" alt="Digital Phase-Locked Loop">
+						The Digital Phase-Locked Loop (DPLL) was the final project in a graduate course that I took about VLSI. 
+						I was required to design the DPLL using Cadence to create both the overall schematic and the layout of the CMOS-based components.<br/><br/>
+						The purpose of the circuit is to align the frequency and phase of a local clock with those of an input reference clock. 
+						The system has a local Voltage-Controlled Oscillator operating at around 1.3 GHz using a closed loop of an odd number of CMOS inverters 
+						with their current flow controlled by the voltage biasing of NMOS devices connected to the source of the bottom NMOS of each inverter. 
+						Then, that VCO signal gets passed through an array of frequency divider circuits to provide limitation to the frequency of the VCO so it can 
+						better align with the reference clock frequency. Both the reference clock and the output of the frequency-divider clock are the inputs of 
+						a Phase-Frequeny Detector that responds to the differences in the input signal levels. It outputs those differences to a Charge Pump, followed 
+						by a lowpass filter to control the biasing of the VCO, and thus align the frequency and phase of the VCO with the input ones.<br/><br/>
+						The NMOS and PMOS devices were required to be scaled accurately with keeping their W/L ratios optimal for the function required. For example, 
+						the (W/L<sub>p</sub> / W/L<sub>n</sub>) ratio for the VCO was close to 3.4 to have more symmetry in the voltage transfer characteristics of the CMOS 
+						inverters with almost equal noise margins, making the VCO signal more square-wave-shaped.<br/>
+						The example schematic and layout below are those of the VCO.<br/>
+						<img src="resources/vco_schematic.jpg" class="supporting" alt="VCO Schematic" style="float: left; margin: 40px 5%">
+						<img src="resources/vco_layout.jpg" class="supporting" alt="VCO Layout" style="float: right; margin: 40px 5%"><br/><br/>
+						After many hours of refining the layouts of each component, tuning the bandwidth of the lowpass filter, and passing Design Rule Checks 
+						to correctly map between schematics and layouts, I got my DPLL to successfully lock frequencies in the range 12.5 MHz - 250 MHz.<br/>
+						The figures below display the VCO control voltage, reference clock input, DPLL output, and VCO output at 250 MHz input.<br/>
+						<img src="resources/vco_ctrl.jpg" class="supporting" alt="VCO Schematic" style="float: left; margin: 40px 5%">
+						<img src="resources/vco_clk.jpg" class="supporting" alt="VCO Layout" style="float: right; margin: 40px 5%"><br/><br/>
+					</p>
+				</div>
+				<p class="expandable_btn" id="noise_btn"><span id="noise_plus">+</span>&nbsp;&nbsp;Adaptive Noise Cancellation</p>
+				<div class="expandable_div hidden" id="noise_div">
+					This project was a part of an upper-division undergraduate course that I took on Digital Signal Processing. 
+					Based on the Least Squares and LMS adaptive noise filter design algorithms, I designed a program in MATLAB which takes 
+					a primary signal and a reference signal, as well as other parameters, and attempted to filter out the noise from the primary signal. 
+					I experimented with modifying the different filter parameters to see the effect on the quality of the resulting sound.<br/><br/>
+					The adaptive noise canceller takes two inputs - the original signal (primary input), and noise (reference). The reference signal goes 
+					through an adjustable filter and gets subtracted from the original signal to try and cancel out only the noise component. The error signal 
+					is then supposed to be the output sound with a lower noise component (or none, ideally). The error signal is then passed to the adaptive algorithm 
+					that tries to match the reference noise with the noise component of the original signal. Two methods were used to achieve this:<br/>
+					<b>Least Squares Adaptive Filtering: </b>Minimize the squared error of the signal over some time interval and update the filter 
+					using the resulting correlation matrices. This method should converge faster, but it requires complicated matrix inversion 
+					calculations that take time for the device to process.<br/>
+					<b>Least Mean Squares Adaptive Filtering: </b>Adjust the filter according to the error that it produces multiplied by a small number (step size) to 
+					more gradually converge into the optimum. This is similar to the gradient-based approach, but instead of updating the filter using the gradient of 
+					the produced squared error, it just uses the error signal, thereby requiring less calculations, but resulting in much slower convergence.<br/><br/>
+					By experimenting with the LMS filter parameters, I attempted to optimize its result by attempting to reach faster convergence.<br/><br/>
+					As an example, I had a voice file with a strong background jet engine noise (that has been passed through a certain filter), and another file with similar 
+					jet engine noise. The task was to try and match the adaptive filter with the filter that the noise was passed through.<br/>
+					After creating the two filters, I compared their performances both by listening to them and plotting the resulting error signals to see which one 
+					matches the original voice signal the most.
+					The plot on the left shows the three signals (Original in yellow, Least Squares in red, and LMS in blue, step size 0.00005), and the plot 
+					on the right shows the LMS signal using different step sizes.<br/>
+					<img src="resources/voice1.jpg" class="supporting" alt="Original, LMS, and Least Squares signals" style="float: left; margin: 40px 5%">
+					<img src="resources/voice2.jpg" class="supporting" alt="LMS-Filtered Signal using different step sizes" style="float: right; margin: 40px 5%"><br/><br/>
+					The Least Squares algorithm converged almost right away, but took much longer computation time. The LMS algorithm converged very slowly, depending on the step size. 
+					However, increasing the step size beyond a certain threshold caused the filter's response to diverge and the noise to amplify by magnitudes. This taught me 
+					about the tradeoff between using more computation time and resources to optimize the filter using less samples, versus using less computation resources but 
+					risking slow convergence, or none at all.<br/><br/>
 				</div>
 			</div>
 			<div class="textdiv" id="contact">
-				<h1 class="textheader">Contact Info</h1>
+				<h1 class="textheader">Contact:</h1>
+				<a href="javascript:mailrep('Z2F/sY-mVuM/jAw-MkBn.bW.FpbC5-jb20=');"><img src="resources/email_logo.jpg" class="contact_img" alt="Email"></a>
+				<img src="resources/linkedin_logo.jpg" class="contact_img" onclick="window.open('https://www.linkedin.com/in/gal-ben-itzhak/')" alt="Linkedin">
 			</div>
+		</div>
+		<div id="popupModal" class="modal">
+			<span class="close">&times;</span>
+			<img class="modalImage" id="modalImg">
+			<p id="caption"></p>
 		</div>
 	</body>
 </html>

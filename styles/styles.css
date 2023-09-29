@@ -22,10 +22,10 @@ body {
 	border-radius: 3px;
 	text-align: left;
 	font-family: "Roboto Slab", sans-serif;
-	font-size: 18px;
-	color: #ffffff;
 	max-width: min(80%, 800px);
 	margin: 30px auto;
+	font-size: 18px;
+	color: #ffffff;
 }
 
 h1.textheader {
@@ -77,24 +77,146 @@ td:hover {
 .expandable_btn:hover {
 	cursor: pointer;
 	color: #80aaff;
-	text-shadow: 1.5px 1.5px #1C7FCF;
+	text-shadow: 1px 1px #1C7FCF;
 }
 
 .expandable_btn {
 	color: #ffffff;
 	transition: color 300ms;
-	font-size: 26px;
-	text-shadow: 1.5px 1.5px #3C9FEF;
+	font-size: 18px;
+	text-shadow: 1px 1px #3C9FEF;
+}
+
+.expandable_plus:hover {
+	cursor: pointer;
+	color: #80aaff;
+	text-shadow: 1px 1px #1C7FCF;
+}
+
+.expandable_plus {
+	color: #ffffff;
+	transition: color 300ms;
+	font-size: 18px;
+	text-shadow: 1px 1px #3C9FEF;
 }
 
 .expandable_div.hidden {
 	max-height: 0px;
 	overflow: hidden;
-	transition: max-height 400ms;
+	transition: max-height 800ms;
 }
 
 .expandable_div.shown {
-	max-height: 200px;
+	max-height: 2500px;
 	overflow: hidden;
-	transition: max-height 400ms;
+	transition: max-height 800ms;
+}
+
+a {
+	color: #fff700;
+	text-decoration: none;
+	transition: color 300ms;
+}
+
+a:hover {
+	color: #d8ab18;
+}
+
+img.supporting {
+	float: right;
+	width: 40%;
+	height: auto;
+	margin: 40px 30px;
+	transition: opacity 250ms;
+}
+
+img.supporting:hover {
+	opacity: 50%;
+	cursor: pointer;
+}
+
+.textdiv#contact {
+	text-align: center;
+}
+
+img.contact_img {
+	width: min(25%, 100px);
+	height: auto;
+	margin: 20px 30px;
+	border: 2px solid #ffffffae;
+	border-radius: 50%;
+	transition: opacity 250ms;
+}
+
+img.contact_img:hover {
+	opacity: 50%;
+	cursor: pointer;
+}
+
+.modal {
+	display: none;
+	z-index: 1;
+	position: fixed;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modalImage {
+	margin: auto;
+	display: block;
+	max-width: min(90%, 800px);
+	max-height: 90%;
+	width: auto;
+	height: auto;
+}
+
+#caption {
+	margin: 20px auto;
+	display: block;
+	font-family: "Roboto Slab", sans-serif;
+	width: 80%;
+	font-size: 22px;
+	max-width: 700px;
+	text-align: center;
+	color: #ffffff;
+	padding: 10px 0;
+	height: 150px;
+}
+
+.modalImage, #caption {
+	animation-name: zoom;
+	animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+	from {transform:scale(0)}
+	to {transform:scale(1)}
+}
+
+.close {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+
+.close:hover, .close:focus {
+	color: #aaa;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+	.modal-content {
+		width: 100%;
+	}
 }
