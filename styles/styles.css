@@ -124,7 +124,17 @@ a:hover {
 
 img.supporting {
 	float: right;
-	width: 40%;
+	max-width: 40%;
+	width: auto;
+	height: auto;
+	margin: 40px 30px;
+	transition: opacity 250ms;
+}
+
+img.supporting2 {
+	float: right;
+	max-width: 40%;
+	width: auto;
 	height: auto;
 	margin: 40px 30px;
 	transition: opacity 250ms;
@@ -170,8 +180,8 @@ img.contact_img:hover {
 .modalImage {
 	margin: auto;
 	display: block;
-	max-width: min(90%, 800px);
-	max-height: 90%;
+	max-width: min(75%, 700px);
+	max-height: min(75%, 700px);
 	width: auto;
 	height: auto;
 }
@@ -179,9 +189,9 @@ img.contact_img:hover {
 #caption {
 	margin: 20px auto;
 	display: block;
-	font-family: "Roboto Slab", sans-serif;
+	font-family: "Satisfy", sans-serif;
 	width: 80%;
-	font-size: 22px;
+	font-size: 26px;
 	max-width: 700px;
 	text-align: center;
 	color: #ffffff;

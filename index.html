@@ -7,6 +7,7 @@
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link href="resources/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
 		<script src="scripts/background.js" type="text/javascript"></script>
 	</head>
 	<body>
@@ -26,18 +27,20 @@
 				<h1 style="text-shadow: 1.5px 1.5px #0062eb; font-size: 40px; margin-bottom: -10px; margin-top: 10px; letter-spacing: 3px; word-spacing: 10px">GAL BEN-ITZHAK</h1><br/>
 				<h2 style="text-shadow: 1px 1px #0062eb; font-size: 38px; margin-top: -10px; margin-bottom: 10px; letter-spacing: 2.2px; word-spacing: 6px;">Electrical Engineer</h2>
 			</div>
-			<div class="textdiv" id="about">
+			<div class="textdiv" id="about" style="padding-bottom: 30px">
 				<h2 style="margin-top: -10px; margin-bottom: -10px">Welcome to my website!</h2><br />
-				I am a first-year Electrical Engineering Ph.D. student
-				at the University of California, Irvine, where I have also
-				completed my B.S. in Electrical Engineering <span style="font-style: italic">
-				Summa Cum Laude</span> with a double specialization in Digital
-				Signal Processing & Communications.<br/><br/>
-				I am currently interning at NASA Jet Propulsion Laboratory as an
-				Electronics Hardware Engineering Intern for the Suborbital Radar
-				Science and Engineering Group.<br/><br/>
-				I am confident in my capability to contribute in a wide range of fields due to my experiences and knowledge, coupled with my 
-				quick learning and adaptability traits. You can read about some of my skills and achievements below.<br/>
+				<img src="resources/gal_jpl.jpg" class="supporting" alt="NASA Jet Propulsion Laboratory Mission Control Room" style="margin-top: 10px">
+				<p>
+					I am a first-year Electrical Engineering Ph.D. student
+					at the University of California, Irvine (UCI), where I have also
+					completed my B.S. in Electrical Engineering <span style="font-style: italic">
+					Summa Cum Laude</span> with a double specialization in Digital
+					Signal Processing & Communications.<br/><br/>
+					I am currently interning at NASA Jet Propulsion Laboratory as an
+					Electronics Hardware Engineer for the Suborbital Radar
+					Science and Engineering Group.<br/><br/>
+					I am confident in my capability to contribute in a wide range of fields due to my experiences and knowledge, coupled with my 
+					quick learning and adaptability traits. You can read about some of my skills and achievements below.<br/>
 				</p>
 			</div>
 			<div class="textdiv" id="internships">
@@ -45,13 +48,15 @@
 				<p class="expandable_btn" id="jpl_btn"><span id="jpl_plus">+</span>&nbsp;&nbsp;Electronics Hardware Engineering Intern - <span style="font-style: italic;">NASA Jet Propulsion Laboratory</span></p>
 				<div class="expandable_div hidden" id="jpl_div">
 					<p>
-						<img src="resources/gal_jpl.jpg" class="supporting" alt="NASA Jet Propulsion Laboratory Mission Control Room">
+						<img src="resources/gal_jpl2.jpg" class="supporting2" alt="NASA Jet Propulsion Laboratory Mission Control Room" style="border-radius: 50%; margin-bottom: 0px">
 						• Designed the power distribution board of the DGPS system for the <a href="https://uavsar.jpl.nasa.gov" target="_blank" rel="noopener noreferrer">UAVSAR</a> using Altium. 
 						Drew the schematics, designed component footprints and pinouts, and designed the PCB layout and stackup. 
 						Tested and debugged the PCB to confirm it performs its functions accurately.<br/><br/>
 						• Designed cable drawings to interface between the various DGPS components and the power board, making sure they all fit in a fixed enclosure.<br/><br/>
 						• Soldered different cables to increase cable length and match between different connectors.<br/><br/>
 						• Maintained corner reflectors.<br/><br/>
+						<img src="resources/nasa.png" class="supporting2" alt="NASA" style="max-width: min(100px, 20%); float: right">
+						<img src="resources/jpl.png" class="supporting2" alt="JPL" style="max-width: min(100px, 20%); float: right">
 						• Designed an RF distribution system, oscillator clock distribution, and a PPS fanout buffer board.<br/><br/>
 						• Processed GPS and INU data using MATLAB procedures.<br/><br/>
 					</p>
@@ -59,6 +64,7 @@
 				<br/>
 				<p class="expandable_btn" id="menlo_btn"><span id="menlo_plus">+</span>&nbsp;&nbsp;RF Applications Engineering Intern - <span style="font-style: italic;">Menlo Micro</span></p>
 				<div class="expandable_div hidden" id="menlo_div">
+					<img src="resources/menlo.png" class="supporting2" alt="Menlo Micro" style="max-width: min(120px, 40%)">
 					<p>• Performed R<sub>on</sub>, rise/fall time, S-parameter characterization, C<sub>off</sub>, and power tests for RF switches.<br/><br/>
 					• Tested the turn-off input voltage bias of RF switches over cycles.<br/><br/>
 					• Developed a software to automate IP3 testing using a PIM testing device.
@@ -68,6 +74,7 @@
 					Generalized this software for multiple RF switches.<br/><br/>
 					• Using the above software, I tested RF switches over cycles  
 					to see the differences in IP3 over their entire lifetimes.<br/><br/>
+					<img src="resources/ideal_switch.png" class="supporting2" alt="Ideal Switch" style="float: left; max-width: min(120px, 40%)">
 					• Characterized multiple revisions of the MM5620 switches to plot their S-parameters, compared them, 
 					and provided my analysis to the rest of the engineers.<br/><br/>
 					• For many of my tests, I generated plots and created presentations that 
@@ -105,6 +112,7 @@
 						their spread, and thus support on-ground firefighters.<br/><br/>
 						• In our senior project, we used drones as relay stations to forward messages and media between each other, and thus increase the area of coverage of 
 						the entire system, instead of having all the drones communicate only with a ground station. <br/>
+						<img src="resources/drones.jpg" class="supporting" alt="Drone Relay System" style="max-width: min(300px, 40%); float: right">
 						For the proof of concept, we connected a Raspberry PI to each drone and attached Wi-Fi dongles to them to establish communication between the different drones. 
 						We verified that we can send commands from one Raspberry PI to another and control the drone using the MAVLink Protocol.<br/><br/>
 						• While working on this project, I was also interested in optimization of the communication system and using the least amount of power necessary to process and transmit the drone 
@@ -153,6 +161,7 @@
 					Based on the Least Squares and LMS adaptive noise filter design algorithms, I designed a program in MATLAB which takes 
 					a primary signal and a reference signal, as well as other parameters, and attempted to filter out the noise from the primary signal. 
 					I experimented with modifying the different filter parameters to see the effect on the quality of the resulting sound.<br/><br/>
+					<img src="resources/adaptive.jpg" class="supporting" alt="Adaptive Noise Canceling Filter Block Diagram" style="max-width: min(350px, 50%); float: right">
 					The adaptive noise canceller takes two inputs - the original signal (primary input), and noise (reference). The reference signal goes 
 					through an adjustable filter and gets subtracted from the original signal to try and cancel out only the noise component. The error signal 
 					is then supposed to be the output sound with a lower noise component (or none, ideally). The error signal is then passed to the adaptive algorithm 
