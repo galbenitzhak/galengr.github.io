@@ -166,7 +166,7 @@ img.contact_img:hover {
 
 .modal {
 	display: none;
-	z-index: 1;
+	z-index: 3;
 	position: fixed;
 	padding-top: 100px;
 	left: 0;
