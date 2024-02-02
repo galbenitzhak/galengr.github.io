@@ -130,6 +130,30 @@
 			</div>
 			<div class="textdiv" id="projects">
 				<h1 class="textheader">Projects</h1>
+				<p class="expandable_btn" id="carspeed_btn"><span id="carspeed_plus">+</span>&nbsp;&nbsp;Supervised Learning for Car Speed Prediction From Dashcam Video</p>
+				<div class="expandable_div hidden" id="carspeed_div">
+					<p>
+						Final project for a graduate course that I took about machine learning for Digital Signal Processing.<br/>
+						I wanted to see if I can use a neural network model to estimate the forward speed of my car based on its dashcam footage. 
+						To collect the data, I drove my car for around 15 minutes while also capturing a screen recording of my phone with 
+						a speedometer app open. From the 15 minute video, I extracted 4 minutes where I am driving in a (mostly) straight line, except 
+						for a few instances when I am stopped (and there are cars moving around), when I am changing lanes, and taking a U-turn once.
+						<img src="resources/speed_interpolation.jpg" class="supporting" alt="Screen recording to interpolated speed values"><br/><br/>
+						I aligned those 4 minutes of dashcam video with 4 minutes from the screen recording to make sure the timestamps 
+						of the speed match (even though the framerates were different). I then converted the screen recording of the speed to numerical values using optical character recognition 
+						and linearly interpolated the speed values where the app did not show any change (the refresh rate of the app was lower than the video's framerate).<br/><br/>
+						I processed the dashcam video (downsampling and converting from RGB to grayscale, to save memory) with the interpolated speed values in a Python script that uses these data to train a neural network. 
+						The sequence of images from the 4-minute video were used as inputs, while the interpolated speed values were used as outputs for the supervised 
+						learning model. The neural network (generated using Keras) used 2D convolutional layers, as well as maxpooling, LSTM, and dense ReLu layers to 
+						try estimate the speed values from image sequences, based on optical flow models. I used 90% of the values used from the 4-minute videos for training, and the rest for validation.<br/><br/>
+						<img src="resources/speed_estimation.jpg" class="supporting" alt="Model prediction of speed values from video">
+						The model seemed to fit very well to the training data, but there is some variation with the validation data (some of the final segment of the graph above). 
+						This points at possible overfitting of the model to the data, while there were also more changes in the environment in those last 10% of recording (more cars moving around 
+						and changing lanes)... However, it was a great learning experience to collect my own data, process it, and then train a neural network on it to create a model that tries to 
+						predict speed of forward motion just based on a video.<br/>
+						
+					</p>
+				</div>
 				<p class="expandable_btn" id="dpll_btn"><span id="dpll_plus">+</span>&nbsp;&nbsp;Digital Phase-Locked Loop</p>
 				<div class="expandable_div hidden" id="dpll_div">
 					<p>
